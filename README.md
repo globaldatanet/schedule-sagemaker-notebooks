@@ -15,7 +15,7 @@ Now that you have created the functions, you need to create an event to trigger 
 
 We use cron expression format for the schedule. For more information about creating your custom cron expression, see Schedule Expressions for Rules. All scheduled events use UTC time zone, and the minimum precision for schedules is 1 minute.
 
-For example, the cron expression for 7:00 AM, Monday through Friday throughout the year, is 0 7 ? * MON-FRI *, and for 9:00 PM on the same days is 0 21 ? * MON-FRI *.
+For example, the cron expression for 7:00 AM, Monday through Friday throughout the year, is `0 7 ? * MON-FRI *`, and for 9:00 PM on the same days is `0 21 ? * MON-FRI *`.
 
 To create the event for stopping your instances on a specific schedule, complete the following steps:
 
@@ -26,6 +26,6 @@ To create the event for stopping your instances on a specific schedule, complete
 5. Under Targets, choose Lambda function.
 6. Choose your function from the list 
 7. Choose Configure details
-8. Add a name for your event, such as '''Stop-Notebooks-Event''', and a description.
+8. Add a name for your event, such as `Stop-Notebooks-Event`, and a description.
 9. Leave Enabled
 10 Choose Create
