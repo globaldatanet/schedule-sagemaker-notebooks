@@ -1,7 +1,7 @@
 # schedule-sagemaker-notebooks
 Scheduling start and stop of on-demand notebook instances
 
-## Creating Lambdas for Starting and Stopping
+## Creating Lambda's for Starting and Stopping
 
 1. Create Lambda function for starting and stopping on-demand notebook instances with specific keywords in their name. For this example, our development team’s on-demand notebook instances have names starting with dev-.
 
