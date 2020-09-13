@@ -1,6 +1,8 @@
 # schedule-sagemaker-notebooks
 Scheduling start and stop of on-demand notebook instances
 
+## Creating Lambdas for Starting and Stopping
+
 1. Create Lambda function for starting and stopping on-demand notebook instances with specific keywords in their name. For this example, our development team’s on-demand notebook instances have names starting with dev-.
 
 2. Your Lambda function should have the SageMakerFullAccess policy attached to its execution IAM role.
@@ -24,6 +26,6 @@ To create the event for stopping your instances on a specific schedule, complete
 5. Under Targets, choose Lambda function.
 6. Choose your function from the list 
 7. Choose Configure details
-8. Add a name for your event, such as 'Stop-Notebooks-Event', and a description.
+8. Add a name for your event, such as '''Stop-Notebooks-Event''', and a description.
 9. Leave Enabled
 10 Choose Create
