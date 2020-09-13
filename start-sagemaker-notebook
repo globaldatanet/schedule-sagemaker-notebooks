@@ -1,0 +1,17 @@
+Code to start InService Notebooks that contain specific keywords in their name
+# Change "dev-" in NameContains to your specific use case
+
+import boto3
+client = boto3.client('sagemaker')
+def lambda_handler(event, context):
+    try:
+        response_nb_list = client.list_notebook_instances(
+            NameContains='dev-',     # Change this to your specific use case
+            StatusEquals= 'Stopped'
+                )
+        for nb in response_nb_list['NotebookInstances']:
+            response_nb_stop = client.start_notebook_instance(
+                    NotebookInstanceName = nb['NotebookInstanceName'])
+        return {"Status": "Success"} 
+    except:
+        return {"Status": "Failure"}
